@@ -1,0 +1,86 @@
+html, body
+{
+    width : 100%;
+    height : 100%;
+    margin : 0;
+    padding : 0;
+    display : flex;
+    flex-direction: column;
+    background-color : rgb(0, 0, 0);
+}
+p
+{
+    margin : 0;
+    padding : 0;
+}
+#cercle
+{
+    background-color : rgb(209, 209, 209);
+    border-radius : 50vw;
+    width : 70vw;
+    height : 70vw;
+    margin : auto;
+    border : 3vw solid rgb(153, 153, 153);
+    display : flex;
+}
+#heure
+{
+    font-family : sans-serif;
+    color : rgb(0, 0, 0);
+    margin : auto;
+    text-align : center;
+    font-size : 10vw;
+}
+#cadre
+{
+    display : flex;
+    width : 70vw;
+    height : 10%;
+    margin : auto;
+    margin-top : 10vh;
+    margin-bottom : 10vh;
+}
+#checkbox
+{
+    width : 5vw;
+    height : 5vw;
+    margin : auto;
+}
+label
+{
+    font-size : 5vw;
+    font-family : sans-serif;
+    color : white;
+    text-align : center;
+    margin : auto;
+}
+
+
+@media screen and (orientation : landscape)
+{
+    #cercle
+    {
+        width : 60vh;
+        height : 60vh;
+        border : 3vh solid rgb(153, 153, 153);
+    }
+    #heure
+    {
+        font-size : 10vh;
+    }
+    #cadre
+    {
+        width : 70vh;
+        margin-top : 0vh;
+        margin-bottom : 0vh;
+    }
+    #checkbox
+    {
+        width : 5vh;
+        height : 5vh;
+    }
+    label
+    {
+        font-size : 5vh;
+    }
+}
