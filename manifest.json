@@ -15,7 +15,7 @@
   ],
   "start_url": "/13H13/",
   "background_color": "#000000",
-  "display": "fullscreen",
+  "display": "standalone",
   "theme_color": "#000000",
   "lang": "en"
 }
