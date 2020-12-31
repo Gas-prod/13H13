@@ -5,12 +5,12 @@
     {
       "src": "/icon/512x512.png",
       "type": "image/png",
-      "sizes": "128x128"
+      "sizes": "512x512"
     },
     {
       "src": "/icon/192x192.png",
       "type": "image/png",
-      "sizes": "144x144"
+      "sizes": "192x192"
     }
   ],
   "start_url": "/13H13/",
