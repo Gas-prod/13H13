@@ -1,35 +1,21 @@
 {
-    "name": "13 H 13",
-    "short_name": "13 H 13",
-    "icons": [
-        {
-          "src": "/13H13/icon1.png",
-          "type": "image/png",
-          "sizes": "128x128"
-        },
-        {
-          "src": "/13H13/icon2.png",
-          "type": "image/png",
-          "sizes": "144x144"
-        },
-        {
-          "src": "/13H13/icon3.png",
-          "type": "image/png",
-          "sizes": "152x152"
-        },
-        {
-          "src": "/13H13/icon4.png",
-          "type": "image/png",
-          "sizes": "192x192"
-        },
-        {
-          "src": "/13H13/icon5.png",
-          "type": "image/png",
-          "sizes": "512x512"
-        }
-    ],
-    "start_url": "/13H13/",
-    "background_color": "#000000",
-    "display": "standalone",
-    "theme_color": "#000000"
+  "name": "13 H 13",
+  "short_name": "13H13",
+  "icons": [
+    {
+      "src": "/icon/512x512.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "/icon/192x192.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    }
+  ],
+  "start_url": "/13H13/",
+  "background_color": "#000000",
+  "display": "fullscreen",
+  "theme_color": "#000000",
+  "lang": "en"
 }
