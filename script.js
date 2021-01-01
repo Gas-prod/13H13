@@ -1,6 +1,6 @@
-var notificationActive;
-var notificationSupporte;
-var nbrNotif = 0;
+//var notificationActive;
+//var notificationSupporte;
+//var nbrNotif = 0;
 
 function horloge() {
     var date = new Date(); 
@@ -47,31 +47,6 @@ function horloge() {
 }
 setInterval("horloge()", 1000);
 
-notifPermission();
-
-function notifPermission(){
-    if(!("Notification" in window)){
-        notificationSupporte = false;
-        notificationActive = false;
-    }else if(Notification.permission === "granted"){
-        notificationSupporte = true;
-        notificationActive = true;
-        console.log("notif permise");
-    }else if(Notification.permission !== "denied"){
-        Notification.requestPermission().then(permission => {
-            if(permission === "granted"){
-                notificationSupporte = true;
-                notificationActive = true;
-                console.log("notif permise");
-            }else{
-                notificationSupporte = true;
-                notificationActive = false;
-                console.log("notif pas permise");
-            }
-        });
-    }
-}
-
-function showNotif(notif){
-    const notification = new Notification(notif);
-}
+window.addEventListener("click", function(){
+    Push.create("hello");
+})
