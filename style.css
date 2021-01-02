@@ -54,16 +54,17 @@ label
     text-align : center;
     margin : auto;
 }
+
 .install-shadow
 {
     position: absolute;
     top: 0; bottom: 0; left: 0; right: 0;
     background-color: rgba(0, 0, 0, 0.55);
-    display: none;
+    /* display: none; */
 }
 .install-alert
 {
-    background-color: #ececec;
+    background-color: white;
     position: absolute;
     left: 0; right: 0;
     bottom: 0;
@@ -72,36 +73,44 @@ label
 }
 .install-text
 {
-    font-size: 4em;
-    width: 80%;
+    font-size: 4.5em;
+    font-family: sans-serif;
 }
 .dismiss-button
 {
     bottom: 40px;
     left: 40px;
+    background-color: white;
+    border: 6px solid  #1a73e8;
 }
 .install-button
 {
     bottom: 40px;
     right: 40px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
 }
 .install-alert > button
 {
     position: absolute;
-    background-color: white;
-    border: 6px solid  #314cb6;
     border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 300px;
-    height: 85px;
+    width: 310px;
+    height: 110px;
     font-size: 3em;
     outline: none;
+    transition: all 0.15s;
 }
-.install-alert > button:hover
+.install-button:hover
 {
-    background-color: #314cb6;
+    background-color: #183fbe;
+}
+.dismiss-button:hover
+{
+    background-color: #1a73e8;
     color: white;
 }
 
