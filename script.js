@@ -1,5 +1,9 @@
 var nbrNotif = 0;
 
+if(Push.Permission.has() != true){
+    Push.Permission.request(onGranted, onDenied);
+}
+
 function horloge() {
     var date = new Date(); 
     var heure = String(date.getHours());
@@ -23,7 +27,7 @@ function horloge() {
             document.getElementById("heure").style.color="black";
         }
 
-        if(document.getElementById("checkbox").checked == true && nbrNotif == 0){
+        if(document.getElementById("checkbox").checked == true && nbrNotif == 0 && Push.Permission.has() == true){
             console.log("notif");
             Push.create("Il est " + heure + " H " + minute + ", touchez votre nez et du rouge");
             nbrNotif ++;
@@ -34,22 +38,10 @@ function horloge() {
         nbrNotif = 0;
     }
 
-    if(document.getElementById("checkbox").checked == true && notificationSupporte == false){
-        alert("Votre naviguateur ne supporte pas les notifications");
+    if(document.getElementById("checkbox").checked == true && Push.Permission.has() == false){
+        alert("Veuillez accepter les notifications");
         document.getElementById("checkbox").checked = false;
-    }
-    if(document.getElementById("checkbox").checked == true && notificationActive == false){
-        alert("Vous n'avez pas accepté les notifications");
-        document.getElementById("checkbox").checked = false;
+        Push.Permission.request(onGranted, onDenied);
     }
 }
-setInterval("horloge()", 1000);
-
-window.addEventListener("click", function(){
-    if(Push.Permission.has() == true){
-        Push.create("hello");
-    }
-    else{
-        alert("veuillez accepter les notifications");
-    }
-})
+setInterval(horloge(), 1000);
