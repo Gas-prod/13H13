@@ -46,13 +46,10 @@ function horloge() {
 setInterval("horloge()", 1000);
 
 window.addEventListener("click", function(){
-    // if(Push.Permission.GRANTED == true){
-    //     Push.create("hello");
-    // }
-    // else{
-    //     alert("veuillez accepter les notifications");
-    // }
-    console.log(Push.Permission.GRANTED);
-    console.log(Push.Permission.has());
-    console.log(Push.Permission.get());
+    if(Push.Permission.has == true){
+        Push.create("hello");
+    }
+    else{
+        alert("veuillez accepter les notifications");
+    }
 })
