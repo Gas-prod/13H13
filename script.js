@@ -1,6 +1,6 @@
-//var notificationActive;
-//var notificationSupporte;
-//var nbrNotif = 0;
+var nbrNotif = 0;
+
+Push.create("Vous avez accepté les notifications");
 
 function horloge() {
     var date = new Date(); 
@@ -25,9 +25,9 @@ function horloge() {
             document.getElementById("heure").style.color="black";
         }
 
-        if(document.getElementById("checkbox").checked == true && notificationActive == true && nbrNotif == 0){
+        if(document.getElementById("checkbox").checked == true && nbrNotif == 0){
             console.log("notif");
-            showNotif("Il est " + heure + " H " + minute + ", touchez votre nez et du rouge");
+            Push.create("Il est " + heure + " H " + minute + ", touchez votre nez et du rouge");
             nbrNotif ++;
         }
     }else{
@@ -48,5 +48,13 @@ function horloge() {
 setInterval("horloge()", 1000);
 
 window.addEventListener("click", function(){
-    Push.create("hello");
+    // if(Push.Permission.GRANTED == true){
+    //     Push.create("hello");
+    // }
+    // else{
+    //     alert("veuillez accepter les notifications");
+    // }
+    console.log(Push.Permission.GRANTED);
+    console.log(Push.Permission.has());
+    console.log(Push.Permission.get());
 })
