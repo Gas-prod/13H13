@@ -1,7 +1,14 @@
 var nbrNotif = 0;
 
 if(Push.Permission.has() != true){
-    Push.Permission.request();
+    Push.Permission.request(onGranted, onDenied);
+}
+
+function onGranted(){
+    console.log("notification granted");
+}
+function onDenied(){
+    console.log("notification denied");
 }
 
 function horloge() {
@@ -41,7 +48,7 @@ function horloge() {
     if(document.getElementById("checkbox").checked == true && Push.Permission.has() == false){
         alert("Veuillez accepter les notifications");
         document.getElementById("checkbox").checked = false;
-        Push.Permission.request();
+        Push.Permission.request(onGranted, onDenied);
     }
 }
 
