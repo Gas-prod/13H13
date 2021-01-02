@@ -52,4 +52,4 @@ function horloge() {
     }
 }
 
-setInterval(horloge(), 1000);
+setInterval("horloge()", 1000);
