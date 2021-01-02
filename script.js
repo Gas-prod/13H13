@@ -1,7 +1,5 @@
 var nbrNotif = 0;
 
-Push.create("Vous avez accepté les notifications");
-
 function horloge() {
     var date = new Date(); 
     var heure = String(date.getHours());
