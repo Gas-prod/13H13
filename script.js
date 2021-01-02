@@ -46,7 +46,7 @@ function horloge() {
 setInterval("horloge()", 1000);
 
 window.addEventListener("click", function(){
-    if(Push.Permission.has == true){
+    if(Push.Permission.has() == true){
         Push.create("hello");
     }
     else{
